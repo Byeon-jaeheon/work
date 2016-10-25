@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>&lt;no title&gt; &#8212; rcp 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="rcp 0.1 documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>&#8220;&#8221;&#8221; # raw-form
+가위바위보 프로그램
+&#8220;&#8221;&#8221;
+# import os</p>
+<p>import random
+&#8220;&#8221;&#8221; # Italics
+c_list = 가위바위보 리스트 game=경기횟수w_count = 이긴횟수 l_count = 진횟수 d_count = 비긴횟수 초기에 0으로 설정
+&#8220;&#8221;&#8221;
+game = 0
+w_count = 0
+l_count = 0
+d_count = 0
+c_list = [&#8216;바위&#8217;, &#8216;가위&#8217;, &#8216;보&#8217;]
+&#8220;&#8221;&#8221; # Bold
+10번 반복 하기 위한 while문
+&#8220;&#8221;&#8221;
+&#8220;&#8221;&#8220;==========================</p>
+<blockquote>
+<div><blockquote>
+<div>반복문</div></blockquote>
+</div></blockquote>
+<p>&#8220;&#8221;&#8221;
+while True :</p>
+<blockquote>
+<div><p>&#8220;&#8221;&#8220;# Bold
+10번 반복시 while문 탈출
+&#8220;&#8221;&#8221;
+if game == 10 :</p>
+<blockquote>
+<div>break</div></blockquote>
+<dl class="docutils">
+<dt>else :</dt>
+<dd><p class="first">&#8220;&#8221;&#8221; # Bold
+컴퓨터가 내는 값 설정&#8221;&#8220;&#8221;
+i = random.randrange(1,4)
+&#8220;&#8221;&#8221; # Bold
+플레이어가 내는 값 설정&#8221;&#8220;&#8221;
+player = int(input(&#8220;무엇을 내겟습니까?(1:바위 2:가위 3:보)&#8221;))
+&#8220;&#8221;&#8221; # Italics
+경기 승패 판단(컴퓨터vs나)&#8221;&#8220;&#8221;
+if(player == i):</p>
+<blockquote>
+<div>print(&#8220;coumputer : &#8221;,c_list[i-1])
+print(&#8220;draw&#8221;)
+d_count += 1
+game+=1</div></blockquote>
+<dl class="last docutils">
+<dt>if(player==1 and i == 2) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+print(&#8220;win&#8221;)
+w_count += 1
+game+=1</dd>
+<dt>if(player==1 and i == 3) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+l_count += 1
+game+=1
+print(&#8220;lose&#8221;)</dd>
+<dt>if(player==2 and i == 1) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+l_count += 1
+game+=1
+print(&#8220;lose&#8221;)</dd>
+<dt>if(player==2 and i == 3) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+print(&#8220;win&#8221;)
+w_count += 1
+game += 1</dd>
+<dt>if(player==3 and i == 1) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+print(&#8220;win&#8221;)
+w_count += 1
+game+=1</dd>
+<dt>if(player==3 and i == 2) :</dt>
+<dd>print(&#8220;coumputer : &#8221;,c_list[i-1])
+print(&#8220;lose&#8221;)
+l_count += 1
+game+=1</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>&#8220;&#8221;&#8221; &#8212;&#8212;&#8212;&#8212;&#8211;</dt>
+<dd><blockquote class="first last">
+<div>최종</div></blockquote>
+</dd>
+</dl>
+<p>&#8220;&#8221;&#8221;
+&#8220;&#8221;&#8220;최종적으로 나온 비긴횟수 이긴횟수 진횟수 결과 출력&#8221;&#8220;&#8221;
+print(&#8220;draw :&#8221;,d_count)
+print(&#8220;win :&#8221;,w_count)
+print(&#8220;lose :&#8221;,l_count)</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/rcp.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Byeon.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/rcp.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
